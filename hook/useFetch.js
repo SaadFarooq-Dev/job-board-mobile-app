@@ -17,7 +17,6 @@ const useFetch = (endpoint, query) => {
       'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
     }
   };
-
   const fetchData = async () => {
     setIsLoading(true)
     try {
@@ -25,7 +24,6 @@ const useFetch = (endpoint, query) => {
       setData(res.data.data)
       setIsLoading(false)
     } catch (error) {
-      setError(error)
       alert("There is an Error")
     } finally {
       setIsLoading(false)
